@@ -39,18 +39,24 @@ img {
   max-width: 100%;
 }
 
-h1, h2 {
-  color: var(--color-default-dark);
+h1, h2, h3 {
+  font-weight: 700;
 }
 
 h1 {
   font-size: 2.5rem;
   line-height: 1.2;
+  color: var(--color-default-dark);
 }
 
 h2 {
   font-size: 3.5rem;
   line-height: 1.14;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 .button {
@@ -114,6 +120,58 @@ h2 {
 }
 .hero .button {
   margin-top: 1.5em;
+}
+
+.plans {
+  margin-top: 3.375em;
+  padding-inline: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.plans .plan {
+  padding-block: 2.5em;
+  border-radius: 0.8125em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 3.125em 3.125em -1.56em rgba(75, 92, 154, 0.2472);
+}
+.plans h2 {
+  margin-top: 0.714em;
+}
+.plans h3 {
+  order: -1;
+}
+.plans .plan-description {
+  margin-top: 0.5em;
+}
+.plans ul {
+  margin-top: 3.5em;
+}
+.plans li + * {
+  margin-top: 1em;
+}
+.plans .button {
+  margin-top: 2em;
+}
+.plans .basic-plan,
+.plans .ultimate-plan {
+  background: white;
+  color: var(--color-default-dark);
+}
+.plans .basic-plan li,
+.plans .ultimate-plan li {
+  color: var(--color-default-light);
+}
+.plans .pro-plan {
+  background: url("../assets/home/bg-pattern-pricing.svg") no-repeat, var(--color-primary-dark);
+  background-position-x: center;
+  background-position-y: -23.6em;
+  color: white;
+}
+.plans .pro-plan li {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /*# sourceMappingURL=main.css.map */

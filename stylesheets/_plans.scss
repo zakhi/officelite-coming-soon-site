@@ -1,0 +1,61 @@
+.plans {
+  margin-top: 3.375em;
+  padding-inline: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  .plan {
+    padding-block: 2.5em;
+    border-radius: 0.8125em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 3.125em 3.125em -1.56em rgba(75, 92, 154, 24.72%);
+  }
+
+  h2 {
+    margin-top: 0.714em;
+  }
+
+  h3 {
+    order: -1;
+  }
+
+  .plan-description {
+    margin-top: 0.5em;
+  }
+
+  ul {
+    margin-top: 3.5em;
+  }
+
+  li + * {
+    margin-top: 1em;
+  }
+
+  .button {
+    margin-top: 2em;
+  }
+
+  .basic-plan,
+  .ultimate-plan {
+    background: white;
+    color: var(--color-default-dark);
+
+    li {
+      color: var(--color-default-light);
+    }
+  }
+
+  .pro-plan {
+    background: url("../assets/home/bg-pattern-pricing.svg") no-repeat, var(--color-primary-dark);
+    background-position-x: center;
+    background-position-y: -23.6em;
+    color: white;
+
+    li {
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+}
