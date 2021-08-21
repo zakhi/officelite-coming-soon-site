@@ -1,5 +1,9 @@
+@use "sass:color";
+
+$primary-color: #5175ff;
+
 :root {
-  --color-primary-dark: #5175ff;
+  --color-primary-dark: #{$primary-color};
   --color-primary-light: #829cff;
   --color-default-dark: #333950;
   --color-default-light: #747b95;
@@ -17,7 +21,7 @@
 }
 
 body {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
   text-align: center;
   line-height: 1.75;
@@ -72,12 +76,12 @@ h2 {
 
 .button-medium {
   color: var(--color-primary-dark);
-  background: rgba(81, 117, 255, 0.1526);
+  background: color.change($primary-color, $alpha: 0.1526);
 }
 
 .button-medium:hover,
 .button-medium:focus {
-  background: rgba(81, 117, 255, 0.25);
+  background: color.change($primary-color, $alpha: 0.25);
 }
 
 .button-light {
@@ -89,9 +93,3 @@ h2 {
 .button-light:focus {
   color: var(--color-primary-light);
 }
-
-.hero p {
-  line-height: 1.625;
-}
-
-/*# sourceMappingURL=main.css.map */
