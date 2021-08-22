@@ -1,3 +1,9 @@
+@mixin for-tablet {
+  @media (min-width: 48em) {
+    @content
+  }
+}
+
 .hero {
   background: url("../assets/home/bg-pattern-header.svg") no-repeat;
   background-position-x: center;
@@ -5,27 +11,55 @@
   background-size: 28.675em;
   padding: 2.875em 1.5em;
 
-  .logo {
+  & > * {
     margin-inline: auto;
+  }
+
+  @include for-tablet {
+    background-position-x: 24.6875em;
+    background-position-y: -10.25em;
+    background-size: 41.625em;
+    padding: 4.5em 2.5em;
+    text-align: left;
+    position: relative;
+
+    & > * {
+      margin-inline: 0;
+    }
   }
 
   .illustration {
     width: 55.35%;
     margin-top: 5em;
-    margin-inline: auto;
+
+    @include for-tablet {
+      position: absolute;
+      width: min(37.8%, 30.25em);
+      margin-top: 0;
+      left: 57.6%;
+      top: 35.7%;
+    }
+  }
+
+  h1, p {
+    max-width: 21.4rem;
+    
+    @include for-tablet {
+      max-width: min(33.75rem, 49.8%);
+    }
   }
 
   h1 {
-    max-width: 14ch;
     margin-top: 1.5em;
-    margin-inline: auto;
+
+    @include for-tablet {
+      margin-top: 2.6em;
+    }
   }
 
   p {
     line-height: 1.625;
-    max-width: 35ch;
     margin-top: 1.5em;
-    margin-inline: auto;
   }
 
   .button {
