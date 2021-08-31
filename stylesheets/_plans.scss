@@ -1,3 +1,5 @@
+@use "resolutions" as *;
+
 .plans {
   margin-top: 3.375em;
   padding-inline: 1.5em;
@@ -5,29 +7,54 @@
   flex-direction: column;
   gap: 2em;
 
+  @include for-tablet {
+    margin-top: 4.25em;
+    gap: 1.5em;
+  }
+
   .plan {
     padding-block: 2.5em;
     border-radius: 0.8125em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
     box-shadow: 0 3.125em 3.125em -1.56em rgba(75, 92, 154, 24.72%);
+
+    @include for-tablet {
+      grid-template-columns: 58% auto;
+      grid-template-rows: repeat(5, auto);
+      grid-auto-flow: column;
+      padding: 3em;
+      text-align: left;
+    }
   }
 
   h2 {
     margin-top: 0.714em;
+
+    @include for-tablet {
+      margin-top: 0.285em;
+    }
   }
 
   h3 {
-    order: -1;
+    grid-area: 1 / 1 / 2 / 2;
   }
 
   .plan-description {
     margin-top: 0.5em;
+
+    @include for-tablet {
+      margin-top: 0.25em;
+    }
   }
 
   ul {
     margin-top: 3.5em;
+
+    @include for-tablet {
+      margin-top: 1em;
+      grid-area: 2 / 2 / -1 / -1;
+      align-self: start;
+    }
   }
 
   li + * {
@@ -36,6 +63,12 @@
 
   .button {
     margin-top: 2em;
+    margin-inline: auto;
+
+    @include for-tablet {
+      margin-top: 1.5em;
+      margin-inline: 0;
+    }
   }
 
   .basic-plan,
@@ -53,6 +86,11 @@
     background-position-x: center;
     background-position-y: -23.6em;
     color: white;
+
+    @include for-tablet {
+      background-position-x: -20em;
+      background-position-y: center;
+    }
 
     li {
       color: rgba(255, 255, 255, 0.75);

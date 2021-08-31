@@ -1,8 +1,4 @@
-@mixin for-tablet {
-  @media (min-width: 48em) {
-    @content
-  }
-}
+@use "resolutions" as *;
 
 .hero {
   background: url("../assets/home/bg-pattern-header.svg") no-repeat;
@@ -50,6 +46,7 @@
   }
 
   h1 {
+    color: var(--color-default-dark);
     margin-top: 1.5em;
 
     @include for-tablet {

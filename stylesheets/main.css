@@ -46,7 +46,6 @@ h1, h2, h3 {
 h1 {
   font-size: 2.5rem;
   line-height: 1.2;
-  color: var(--color-default-dark);
 }
 
 h2 {
@@ -142,6 +141,7 @@ h3 {
   }
 }
 .hero h1 {
+  color: var(--color-default-dark);
   margin-top: 1.5em;
 }
 @media (min-width: 48em) {
@@ -164,31 +164,68 @@ h3 {
   flex-direction: column;
   gap: 2em;
 }
+@media (min-width: 48em) {
+  .plans {
+    margin-top: 4.25em;
+    gap: 1.5em;
+  }
+}
 .plans .plan {
   padding-block: 2.5em;
   border-radius: 0.8125em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
   box-shadow: 0 3.125em 3.125em -1.56em rgba(75, 92, 154, 0.2472);
+}
+@media (min-width: 48em) {
+  .plans .plan {
+    grid-template-columns: 58% auto;
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
+    padding: 3em;
+    text-align: left;
+  }
 }
 .plans h2 {
   margin-top: 0.714em;
 }
+@media (min-width: 48em) {
+  .plans h2 {
+    margin-top: 0.285em;
+  }
+}
 .plans h3 {
-  order: -1;
+  grid-area: 1/1/2/2;
 }
 .plans .plan-description {
   margin-top: 0.5em;
 }
+@media (min-width: 48em) {
+  .plans .plan-description {
+    margin-top: 0.25em;
+  }
+}
 .plans ul {
   margin-top: 3.5em;
+}
+@media (min-width: 48em) {
+  .plans ul {
+    margin-top: 1em;
+    grid-area: 2/2/-1/-1;
+    align-self: start;
+  }
 }
 .plans li + * {
   margin-top: 1em;
 }
 .plans .button {
   margin-top: 2em;
+  margin-inline: auto;
+}
+@media (min-width: 48em) {
+  .plans .button {
+    margin-top: 1.5em;
+    margin-inline: 0;
+  }
 }
 .plans .basic-plan,
 .plans .ultimate-plan {
@@ -204,6 +241,12 @@ h3 {
   background-position-x: center;
   background-position-y: -23.6em;
   color: white;
+}
+@media (min-width: 48em) {
+  .plans .pro-plan {
+    background-position-x: -20em;
+    background-position-y: center;
+  }
 }
 .plans .pro-plan li {
   color: rgba(255, 255, 255, 0.75);
