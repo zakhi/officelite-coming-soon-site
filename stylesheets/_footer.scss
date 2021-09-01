@@ -1,3 +1,5 @@
+@use "resolutions" as *;
+
 footer {
   color: white;
   background: url("../assets/home/bg-pattern-footer.svg") no-repeat, var(--color-background-dark);
@@ -7,11 +9,18 @@ footer {
   margin-top: -50em;
   padding: 56em 1.5em 6em;
 
+  @include for-tablet {
+    margin-top: -31em;
+    padding-block: 37em 6.25em;
+    background-size: 89em;
+    background-position-y: 1.5em;
+  }
+
   .coming-at {
     font-weight: 700;
     line-height: 3;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.3125em;
 
     span {
       color: var(--color-primary-dark);
@@ -19,32 +28,53 @@ footer {
   }
 
   ul {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.8125em;
     max-width: 20.5em;
     margin-top: 1.125em;
     margin-inline: auto;
+
+    @include for-tablet {
+      margin-top: 0.5em;
+      max-width: 28em;
+      gap: 1em;
+    }
   }
 
   li {
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.5);
     background: var(--color-default-dark);
     border-radius: 0.25em;
-    padding: 0.625em 1em;
-    flex: 1;
+    padding-block: 0.625em;
+
+    @include for-tablet {
+      font-size: 1rem;
+      border-radius: 0.81em;
+      padding-block: 1em;
+    }
 
     strong {
       display: block;
       font-size: 2rem;
       line-height: 1.5;
       color: white;
+      letter-spacing: 0.0625rem;
+
+      @include for-tablet {
+        font-size: 3.5rem;
+        line-height: 1.15;
+      }
     }
   }
 
   .button {
     margin-top: 2.5em;
     margin-inline: auto;
+
+    @include for-tablet {
+      margin-top: 3em;
+    }
   }
 }
