@@ -10,54 +10,68 @@
     background-position-x: 24.6875em;
     background-position-y: -10.25em;
     background-size: 41.625em;
-    padding: 4.5em 2.5em;
     text-align: left;
-    position: relative;
   }
 
   .container {
     padding: 2.875em 1.5em;
+    display: grid;
 
     @include for-mobile-only {
       & > * {
         margin-inline: auto;
       }
     }
+
+    @include for-tablet {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, auto);
+      grid-auto-flow: column;
+      padding: 4.5em 2.5em;
+    }
+  }
+
+  .logo {
+    margin-bottom: 5em;
+
+    @include for-tablet {
+      margin-bottom: 6.5em;
+    }
   }
 
   .illustration {
-    width: 55.35%;
-    margin-top: 5em;
+    width: 10.68em;
 
     @include for-tablet {
-      position: absolute;
-      width: min(37.8%, 30.25em);
-      margin-top: 0;
-      left: 57.6%;
-      top: 35.7%;
+      width: 19.75em;
+      margin-right: -1em;
+      margin-bottom: -3em;
+      grid-area: 2 / 2 / -1 / -1;
+      place-self: center right;
     }
   }
 
   h1, p {
-    max-width: 21.4rem;
-    
-    @include for-tablet {
-      max-width: min(33.75rem, 49.8%);
+    @include for-mobile-only {
+      max-width: 21.4rem;
     }
   }
 
   h1 {
     color: var(--color-default-dark);
-    margin-top: 1.5em;
 
-    @include for-tablet {
-      margin-top: 2.6em;
+    @include for-mobile-only {
+      margin-top: 1em;
     }
   }
 
   p {
     line-height: 1.625;
     margin-top: 1.5em;
+
+    @include for-tablet {
+      padding-right: 0.125em;
+    }
   }
 
   .button {
