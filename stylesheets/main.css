@@ -115,23 +115,35 @@ h3 {
     text-align: left;
   }
 }
+@media (min-width: 78em) {
+  .hero {
+    background-position-x: calc(50% + 31.2em);
+    background-position-y: -26.1875em;
+    background-size: 70.875em;
+  }
+}
 .hero .container {
   max-width: 20.5em;
   padding-top: 2.875em;
   display: grid;
 }
-@media (max-width: calc(48em - 1px)) {
-  .hero .container > * {
-    margin-inline: auto;
-  }
-}
 @media (min-width: 48em) {
   .hero .container {
     max-width: 43em;
     padding-top: 4.5em;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-auto-flow: column;
+    grid-template: "logo logo" auto "text image" auto/1fr 1fr;
+    place-items: center right;
+  }
+}
+@media (min-width: 78em) {
+  .hero .container {
+    max-width: 69.375em;
+    padding-top: 5.06em;
+  }
+}
+@media (max-width: calc(48em - 1px)) {
+  .hero img {
+    margin-inline: auto;
   }
 }
 .hero .logo {
@@ -140,6 +152,8 @@ h3 {
 @media (min-width: 48em) {
   .hero .logo {
     margin-bottom: 6.5em;
+    grid-area: logo;
+    justify-self: left;
   }
 }
 .hero .illustration {
@@ -150,8 +164,19 @@ h3 {
     width: 19.75em;
     margin-right: -1em;
     margin-bottom: -3em;
-    grid-area: 2/2/-1/-1;
-    place-self: center right;
+    grid-area: image;
+  }
+}
+@media (min-width: 78em) {
+  .hero .illustration {
+    width: 33.4em;
+    margin-right: -1.6em;
+    margin-bottom: -5.1em;
+  }
+}
+@media (max-width: calc(48em - 1px)) {
+  .hero .hero-text > * {
+    margin-inline: auto;
   }
 }
 @media (max-width: calc(48em - 1px)) {
@@ -167,6 +192,12 @@ h3 {
     margin-top: 1em;
   }
 }
+@media (min-width: 78em) {
+  .hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.143;
+  }
+}
 .hero p {
   line-height: 1.625;
   margin-top: 1.5em;
@@ -176,9 +207,21 @@ h3 {
     padding-right: 0.125em;
   }
 }
+@media (min-width: 78em) {
+  .hero p {
+    font-size: 1.125rem;
+    line-height: 1.56;
+    padding-right: 1em;
+  }
+}
 .hero .button {
   margin-top: 1.5em;
   box-shadow: 0 1.5em 1.5em -0.625em rgba(63, 91, 194, 0.2472);
+}
+@media (min-width: 78em) {
+  .hero .button {
+    margin-top: 2em;
+  }
 }
 
 .plans {

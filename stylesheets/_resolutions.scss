@@ -4,9 +4,14 @@
   }
 }
 
-
 @mixin for-tablet {
   @media (min-width: 48em) {
+    @content
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 78em) {
     @content
   }
 }
