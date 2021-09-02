@@ -1,14 +1,14 @@
 @use "resolutions" as *;
 
 .plans {
-  margin-top: 3.375em;
-  padding-inline: 1.5em;
+  margin-top: 6.25em;
+  max-width: min(43em, 87.5%);
   display: flex;
   flex-direction: column;
   gap: 2em;
 
   @include for-tablet {
-    margin-top: 4.25em;
+    margin-top: 8.75em;
     gap: 1.5em;
   }
 
