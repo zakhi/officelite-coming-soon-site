@@ -58,6 +58,11 @@ h3 {
   line-height: 1.4;
 }
 
+.container {
+  max-width: 70em;
+  margin-inline: auto;
+}
+
 .button {
   font-weight: 700;
   display: block;
@@ -101,10 +106,6 @@ h3 {
   background-position-x: center;
   background-position-y: -10.625em;
   background-size: 28.675em;
-  padding: 2.875em 1.5em;
-}
-.hero > * {
-  margin-inline: auto;
 }
 @media (min-width: 48em) {
   .hero {
@@ -115,8 +116,13 @@ h3 {
     text-align: left;
     position: relative;
   }
-  .hero > * {
-    margin-inline: 0;
+}
+.hero .container {
+  padding: 2.875em 1.5em;
+}
+@media (max-width: calc(48em - 1px)) {
+  .hero .container > * {
+    margin-inline: auto;
   }
 }
 .hero .illustration {

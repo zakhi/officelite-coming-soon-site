@@ -1,3 +1,10 @@
+@mixin for-mobile-only {
+  @media (max-width: calc(48em - 1px)) {
+    @content
+  }
+}
+
+
 @mixin for-tablet {
   @media (min-width: 48em) {
     @content
