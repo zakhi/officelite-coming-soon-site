@@ -2,9 +2,7 @@
 
 .plans {
   margin-top: 6.25em;
-  max-width: min(43em, 87.5%);
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 2em;
 
   @include for-tablet {
@@ -12,16 +10,29 @@
     gap: 1.5em;
   }
 
+  @include for-desktop {
+    margin-top: 11.25em;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875em;
+  }
+
   .plan {
+    display: grid;
     padding-block: 2.5em;
     border-radius: 0.8125em;
-    display: grid;
     box-shadow: 0 3.125em 3.125em -1.56em rgba(75, 92, 154, 24.72%);
 
-    @include for-tablet {
+    @include for-mobile-only {
+      width: 87.5%;
+      margin-inline: auto;
+    }
+
+    @include for-tablet-only {
       grid-template-columns: 58% auto;
       grid-template-rows: repeat(5, auto);
       grid-auto-flow: column;
+      width: 43em;
+      margin-inline: auto;
       padding: 3em;
       text-align: left;
     }
@@ -30,7 +41,7 @@
   h2 {
     margin-top: 0.714em;
 
-    @include for-tablet {
+    @include for-tablet-only {
       margin-top: 0.285em;
     }
   }
@@ -42,7 +53,7 @@
   .plan-description {
     margin-top: 0.5em;
 
-    @include for-tablet {
+    @include for-tablet-only {
       margin-top: 0.25em;
     }
   }
@@ -50,7 +61,7 @@
   ul {
     margin-top: 3.5em;
 
-    @include for-tablet {
+    @include for-tablet-only {
       margin-top: 1em;
       grid-area: 2 / 2 / -1 / -1;
       align-self: start;
@@ -65,7 +76,7 @@
     margin-top: 2em;
     margin-inline: auto;
 
-    @include for-tablet {
+    @include for-tablet-only {
       margin-top: 1.5em;
       margin-inline: 0;
     }
@@ -87,7 +98,7 @@
     background-position-y: -23.6em;
     color: white;
 
-    @include for-tablet {
+    @include for-tablet-only {
       background-position-x: -20em;
       background-position-y: center;
     }

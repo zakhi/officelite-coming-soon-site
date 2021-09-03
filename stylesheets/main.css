@@ -226,9 +226,7 @@ h3 {
 
 .plans {
   margin-top: 6.25em;
-  max-width: min(43em, 87.5%);
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 2em;
 }
 @media (min-width: 48em) {
@@ -237,17 +235,32 @@ h3 {
     gap: 1.5em;
   }
 }
+@media (min-width: 78em) {
+  .plans {
+    margin-top: 11.25em;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875em;
+  }
+}
 .plans .plan {
+  display: grid;
   padding-block: 2.5em;
   border-radius: 0.8125em;
-  display: grid;
   box-shadow: 0 3.125em 3.125em -1.56em rgba(75, 92, 154, 0.2472);
 }
-@media (min-width: 48em) {
+@media (max-width: calc(48em - 1px)) {
+  .plans .plan {
+    width: 87.5%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 48em) and (max-width: calc(78em - 1px)) {
   .plans .plan {
     grid-template-columns: 58% auto;
     grid-template-rows: repeat(5, auto);
     grid-auto-flow: column;
+    width: 43em;
+    margin-inline: auto;
     padding: 3em;
     text-align: left;
   }
@@ -255,7 +268,7 @@ h3 {
 .plans h2 {
   margin-top: 0.714em;
 }
-@media (min-width: 48em) {
+@media (min-width: 48em) and (max-width: calc(78em - 1px)) {
   .plans h2 {
     margin-top: 0.285em;
   }
@@ -266,7 +279,7 @@ h3 {
 .plans .plan-description {
   margin-top: 0.5em;
 }
-@media (min-width: 48em) {
+@media (min-width: 48em) and (max-width: calc(78em - 1px)) {
   .plans .plan-description {
     margin-top: 0.25em;
   }
@@ -274,7 +287,7 @@ h3 {
 .plans ul {
   margin-top: 3.5em;
 }
-@media (min-width: 48em) {
+@media (min-width: 48em) and (max-width: calc(78em - 1px)) {
   .plans ul {
     margin-top: 1em;
     grid-area: 2/2/-1/-1;
@@ -288,7 +301,7 @@ h3 {
   margin-top: 2em;
   margin-inline: auto;
 }
-@media (min-width: 48em) {
+@media (min-width: 48em) and (max-width: calc(78em - 1px)) {
   .plans .button {
     margin-top: 1.5em;
     margin-inline: 0;
@@ -309,7 +322,7 @@ h3 {
   background-position-y: -23.6em;
   color: white;
 }
-@media (min-width: 48em) {
+@media (min-width: 48em) and (max-width: calc(78em - 1px)) {
   .plans .pro-plan {
     background-position-x: -20em;
     background-position-y: center;
