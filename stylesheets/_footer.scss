@@ -16,6 +16,24 @@ footer {
     background-position-y: 1.5em;
   }
 
+  @include for-desktop {
+    margin-top: -15.875em;
+    padding-top: 21em;
+    background-size: 127.25em;
+    background-position-x: calc(50% - 25.2em);
+    background-position-y: -38.375em;
+  }
+
+  .container {
+    @include for-desktop {
+      display: grid;
+      grid-template:
+            "text ." auto
+            "clock button" auto
+            / 1fr 1fr;
+    }
+  }
+
   .coming-at {
     font-weight: 700;
     line-height: 3;
@@ -24,6 +42,11 @@ footer {
 
     span {
       color: var(--color-primary-dark);
+    }
+
+    @include for-desktop {
+      grid-area: text;
+      text-align: left;
     }
   }
 
@@ -39,6 +62,12 @@ footer {
       margin-top: 0.5em;
       max-width: 28em;
       gap: 1em;
+    }
+
+    @include for-desktop {
+      margin-top: 0;
+      grid-area: clock;
+      margin-inline: unset;
     }
   }
 
@@ -75,6 +104,13 @@ footer {
 
     @include for-tablet {
       margin-top: 3em;
+    }
+
+    @include for-desktop {
+      margin-top: 0.75em;
+      grid-area: button;
+      place-self: start right;
+      margin-inline: unset;
     }
   }
 }

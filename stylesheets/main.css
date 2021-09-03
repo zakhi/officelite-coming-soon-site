@@ -349,6 +349,21 @@ footer {
     background-position-y: 1.5em;
   }
 }
+@media (min-width: 78em) {
+  footer {
+    margin-top: -15.875em;
+    padding-top: 21em;
+    background-size: 127.25em;
+    background-position-x: calc(50% - 25.2em);
+    background-position-y: -38.375em;
+  }
+}
+@media (min-width: 78em) {
+  footer .container {
+    display: grid;
+    grid-template: "text ." auto "clock button" auto/1fr 1fr;
+  }
+}
 footer .coming-at {
   font-weight: 700;
   line-height: 3;
@@ -357,6 +372,12 @@ footer .coming-at {
 }
 footer .coming-at span {
   color: var(--color-primary-dark);
+}
+@media (min-width: 78em) {
+  footer .coming-at {
+    grid-area: text;
+    text-align: left;
+  }
 }
 footer ul {
   display: grid;
@@ -371,6 +392,13 @@ footer ul {
     margin-top: 0.5em;
     max-width: 28em;
     gap: 1em;
+  }
+}
+@media (min-width: 78em) {
+  footer ul {
+    margin-top: 0;
+    grid-area: clock;
+    margin-inline: unset;
   }
 }
 footer li {
@@ -407,6 +435,14 @@ footer .button {
 @media (min-width: 48em) {
   footer .button {
     margin-top: 3em;
+  }
+}
+@media (min-width: 78em) {
+  footer .button {
+    margin-top: 0.75em;
+    grid-area: button;
+    place-self: start right;
+    margin-inline: unset;
   }
 }
 
