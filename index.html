@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/main.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+  <script type="module" src="javascript/arrival-date.js"></script>
+
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 <body>
@@ -68,15 +72,13 @@
   <footer>
     <div class="container">
       <p class="coming-at">
-        <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-        Coming <span id="arrival-date">4 Nov 2020</span>
+        Coming <span id="arrival-date">soon</span>
       </p>
-      <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
       <ul>
-        <li><strong>47</strong> days</li>
-        <li><strong>07</strong> hours</li>
-        <li><strong>56</strong> min</li>
-        <li><strong>14</strong> sec</li>
+        <li><strong id="arrival-date-days">00</strong> days</li>
+        <li><strong id="arrival-date-hours">00</strong> hours</li>
+        <li><strong id="arrival-date-minutes">00</strong> min</li>
+        <li><strong id="arrival-date-seconds">00</strong> sec</li>
       </ul>
       <a href="#" class="button button-dark">Get Started</a>
     </div>
