@@ -4,33 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="assetsavicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/sign-up.css">
 
-    <title>Frontend Mentor | Officelite coming soon site</title>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+  <script type="module" src="javascript/arrival-date.js"></script>
+
+  <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 <body>
-  Work smarter. Save time.
+  <header>
+    <img src="assets/shared/logo.svg" alt="officelite logo" class="logo">
+  </header>
 
-  Easily manage your projects. Get on the list and receive in-app perks available only to 
-  early subscribers. We are moving into final development and getting ready for official launch soon.
+  <main class="hero">
+    <h1>Work smarter. Save time.</h1>
+    <p>
+      Easily manage your projects. Get on the list and receive in-app perks available only to
+      early subscribers. We are moving into final development and getting ready for official launch soon.
+    </p>
+    <div class="countdown">
+      <p class="coming-at">
+        Coming <span id="arrival-date">soon</span>
+      </p>
+      <ul>
+        <li><strong id="arrival-date-days">00</strong> days</li>
+        <li><strong id="arrival-date-hours">00</strong> hours</li>
+        <li><strong id="arrival-date-minutes">00</strong> min</li>
+        <li><strong id="arrival-date-seconds">00</strong> sec</li>
+      </ul>
+    </div>
+  </main>
 
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
+  <section class="sign-up">
+    <form action="#">
+      <label for="name">Name</label>
+      <input type="text" id="name">
 
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
+      <label for="email">Email Address</label>
+      <input type="email" id="email">
 
-  Name
-  Email Address
-  Basic Pack Free
-  Basic Pack Free
-  Pro Pack $9.99
-  Ultimate Pack $19.99
-  Phone Number
-  Company
-  Get on the list
+      <label for="plan"></label>
+      <select name="plan" id="plan">
+        <option value="free">Basic Pack Free</option>
+        <option value="pro">Pro Pack $9.99</option>
+        <option value="ultimate">Ultimate Pack $19.99</option>
+      </select>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone">
+
+      <label for="company">Company</label>
+      <input type="text" id="company">
+
+      <input type="submit" value="Get on the list">
+    </form>
+  </section>
+
+  <footer></footer>
 </body>
 </html>

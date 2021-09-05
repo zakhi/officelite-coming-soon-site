@@ -1,0 +1,104 @@
+:root {
+  --color-primary-dark: #5175ff;
+  --color-primary-light: #829cff;
+  --color-default-dark: #333950;
+  --color-default-light: #747b95;
+  --color-background-dark: #25293a;
+  --color-background-light: #fafafa;
+  --color-error: #f05b5b;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.75;
+  background: var(--color-background-light);
+  color: var(--color-default-light);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3.5rem;
+  line-height: 1.14;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 69.375em;
+  margin-inline: auto;
+}
+
+.button {
+  font-weight: 700;
+  display: block;
+  max-width: max-content;
+  padding: 0.875em 2.5625em;
+  border-radius: 1.75em;
+}
+
+.button-dark {
+  color: white;
+  background: var(--color-primary-dark);
+}
+
+.button-dark:hover,
+.button-dark:focus {
+  background: var(--color-primary-light);
+}
+
+.button-medium {
+  color: var(--color-primary-dark);
+  background: rgba(81, 117, 255, 0.1526);
+}
+
+.button-medium:hover,
+.button-medium:focus {
+  background: rgba(81, 117, 255, 0.25);
+}
+
+.button-light {
+  color: var(--color-primary-dark);
+  background: white;
+}
+
+.button-light:hover,
+.button-light:focus {
+  color: var(--color-primary-light);
+}
+
+/*# sourceMappingURL=sign-up.css.map */
