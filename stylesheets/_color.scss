@@ -11,6 +11,7 @@ $default-dark: #333950;
 $default-dark-50: color.change($default-dark, $alpha: 0.5);
 
 $default-light: #747b95;
+$default-light-50: color.change($default-light, $alpha: 0.5);
 
 $background-dark: #25293a;
 $background-light: #fafafa;

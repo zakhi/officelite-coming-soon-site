@@ -19,7 +19,7 @@
   <main>
     <div class="container">
       <img src="assets/shared/logo.svg" alt="officelite logo" class="logo">
-      <div class="hero-text">
+      <div class="hero">
         <h1>Work smarter. Save time.</h1>
         <p>
           Easily manage your projects. Get on the list and receive in-app perks available only to
@@ -39,26 +39,19 @@
       </div>
 
       <form action="#">
-        <label for="name">Name</label>
-        <input type="text" id="name">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email Address">
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email">
-
-        <label for="plan"></label>
-        <select name="plan" id="plan">
+        <select name="plan">
           <option value="free">Basic Pack Free</option>
           <option value="pro">Pro Pack $9.99</option>
           <option value="ultimate">Ultimate Pack $19.99</option>
         </select>
 
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone">
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <input type="text" name="company" placeholder="Company">
 
-        <label for="company">Company</label>
-        <input type="text" id="company">
-
-        <input type="submit" value="Get on the list">
+        <input type="submit" value="Get on the list" class="button button-dark">
       </form>
     </div> <!-- container -->
   </main>

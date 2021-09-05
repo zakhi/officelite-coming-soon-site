@@ -86,10 +86,10 @@
   .basic-plan,
   .ultimate-plan {
     background: white;
-    color: var(--color-default-dark);
+    color: color.$default-dark;
 
     li {
-      color: var(--color-default-light);
+      color: color.$default-light;
     }
   }
 

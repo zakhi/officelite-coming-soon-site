@@ -1,7 +1,7 @@
 @use "../color";
 @use "../resolutions" as *;
 
-.hero {
+main {
   background: url("../../assets/home/bg-pattern-header.svg") no-repeat;
   background-position-x: center;
   background-position-y: -10.625em;
@@ -74,7 +74,7 @@
     }
   }
 
-  .hero-text > * {
+  .hero > * {
     @include for-mobile-only {
       margin-inline: auto;
     }
@@ -87,15 +87,8 @@
   }
 
   h1 {
-    color: color.$default-dark;
-
     @include for-mobile-only {
       margin-top: 1em;
-    }
-
-    @include for-desktop {
-      font-size: 3.5rem;
-      line-height: 1.143;
     }
   }
 

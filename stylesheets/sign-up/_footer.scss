@@ -1,0 +1,13 @@
+@use "../color";
+
+footer {
+  background: url("../../assets/home/bg-pattern-footer.svg") no-repeat, color.$background-dark;
+  background-position-x: center;
+  background-position-y: -32em;
+  background-size: 75em;
+  transform: scaleY(-1) scaleX(-1);
+  margin-top: -16em;
+  min-height: 17.5em;
+  position: relative;
+  z-index: -1;
+}

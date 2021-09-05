@@ -36,6 +36,13 @@ h1, h2, h3 {
 h1 {
   font-size: 2.5rem;
   line-height: 1.2;
+  color: #333950;
+}
+@media (min-width: 78em) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.14;
+  }
 }
 
 h2 {
@@ -95,14 +102,14 @@ h3 {
   color: #829cff;
 }
 
-.hero {
+main {
   background: url("../../assets/home/bg-pattern-header.svg") no-repeat;
   background-position-x: center;
   background-position-y: -10.625em;
   background-size: 28.675em;
 }
 @media (min-width: 48em) {
-  .hero {
+  main {
     background-position-x: calc(50% + 21.2em);
     background-position-y: -10.25em;
     background-size: 41.625em;
@@ -110,19 +117,19 @@ h3 {
   }
 }
 @media (min-width: 78em) {
-  .hero {
+  main {
     background-position-x: calc(50% + 31.2em);
     background-position-y: -26.1875em;
     background-size: 70.875em;
   }
 }
-.hero .container {
+main .container {
   max-width: 20.5em;
   padding-top: 2.875em;
   display: grid;
 }
 @media (min-width: 48em) {
-  .hero .container {
+  main .container {
     max-width: 43em;
     padding-top: 4.5em;
     grid-template: "logo logo" auto "text image" auto/1fr 1fr;
@@ -130,31 +137,31 @@ h3 {
   }
 }
 @media (min-width: 78em) {
-  .hero .container {
+  main .container {
     max-width: 69.375em;
     padding-top: 5.06em;
   }
 }
 @media (max-width: calc(48em - 1px)) {
-  .hero img {
+  main img {
     margin-inline: auto;
   }
 }
-.hero .logo {
+main .logo {
   margin-bottom: 5em;
 }
 @media (min-width: 48em) {
-  .hero .logo {
+  main .logo {
     margin-bottom: 6.5em;
     grid-area: logo;
     justify-self: left;
   }
 }
-.hero .illustration {
+main .illustration {
   width: 10.68em;
 }
 @media (min-width: 48em) {
-  .hero .illustration {
+  main .illustration {
     width: 19.75em;
     margin-right: -1em;
     margin-bottom: -3em;
@@ -162,58 +169,49 @@ h3 {
   }
 }
 @media (min-width: 78em) {
-  .hero .illustration {
+  main .illustration {
     width: 33.4em;
     margin-right: -1.6em;
     margin-bottom: -5.1em;
   }
 }
 @media (max-width: calc(48em - 1px)) {
-  .hero .hero-text > * {
+  main .hero > * {
     margin-inline: auto;
   }
 }
 @media (max-width: calc(48em - 1px)) {
-  .hero h1, .hero p {
+  main h1, main p {
     max-width: 21.4rem;
   }
 }
-.hero h1 {
-  color: #333950;
-}
 @media (max-width: calc(48em - 1px)) {
-  .hero h1 {
+  main h1 {
     margin-top: 1em;
   }
 }
-@media (min-width: 78em) {
-  .hero h1 {
-    font-size: 3.5rem;
-    line-height: 1.143;
-  }
-}
-.hero p {
+main p {
   line-height: 1.625;
   margin-top: 1.5em;
 }
 @media (min-width: 48em) {
-  .hero p {
+  main p {
     padding-right: 0.125em;
   }
 }
 @media (min-width: 78em) {
-  .hero p {
+  main p {
     font-size: 1.125rem;
     line-height: 1.56;
     padding-right: 1em;
   }
 }
-.hero .button {
+main .button {
   margin-top: 1.5em;
   box-shadow: 0 1.5em 1.5em -0.625em rgba(63, 91, 194, 0.2472);
 }
 @media (min-width: 78em) {
-  .hero .button {
+  main .button {
     margin-top: 2em;
   }
 }
@@ -304,11 +302,11 @@ h3 {
 .plans .basic-plan,
 .plans .ultimate-plan {
   background: white;
-  color: var(--color-default-dark);
+  color: #333950;
 }
 .plans .basic-plan li,
 .plans .ultimate-plan li {
-  color: var(--color-default-light);
+  color: #747b95;
 }
 .plans .pro-plan {
   background: url("../../assets/home/bg-pattern-pricing.svg") no-repeat, #5175ff;

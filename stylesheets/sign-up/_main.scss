@@ -17,14 +17,13 @@ main {
     margin-inline: auto;
   }
 
-  .hero-text {
+  .hero {
     & > * {
       margin-inline: auto;
       max-width: 21.4rem;
     }
 
     h1 {
-      color: color.$default-dark;
       margin-top: 2em;
     }
 

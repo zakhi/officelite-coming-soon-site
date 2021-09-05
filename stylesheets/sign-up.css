@@ -36,6 +36,13 @@ h1, h2, h3 {
 h1 {
   font-size: 2.5rem;
   line-height: 1.2;
+  color: #333950;
+}
+@media (min-width: 78em) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.14;
+  }
 }
 
 h2 {
@@ -184,20 +191,72 @@ main .container {
 main .logo {
   margin-inline: auto;
 }
-main .hero-text > * {
+main .hero > * {
   margin-inline: auto;
   max-width: 21.4rem;
 }
-main .hero-text h1 {
-  color: #333950;
+main .hero h1 {
   margin-top: 2em;
 }
-main .hero-text p {
+main .hero p {
   line-height: 1.625;
   margin-top: 1em;
 }
 main .countdown {
   margin-top: 4em;
+}
+
+form {
+  background: white;
+  margin-top: 4em;
+  width: min(27.81em, 87.5%);
+  margin-inline: auto;
+  border-radius: 0.8125em;
+  padding: 1.5em;
+  text-align: left;
+}
+form input, form select {
+  display: block;
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0 0 1em 1em;
+  border: 0;
+  border-bottom: 1px solid rgba(116, 123, 149, 0.5);
+}
+form input::placeholder, form select::placeholder {
+  color: rgba(116, 123, 149, 0.5);
+}
+form input:focus, form select:focus {
+  outline: none;
+  border-color: #829cff;
+  border-bottom-width: 2px;
+}
+form input + *, form select + * {
+  margin-top: 1.5em;
+}
+form .button {
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  margin-top: 2.5em;
+}
+
+footer {
+  background: url("../../assets/home/bg-pattern-footer.svg") no-repeat, #25293a;
+  background-position-x: center;
+  background-position-y: -32em;
+  background-size: 75em;
+  transform: scaleY(-1) scaleX(-1);
+  margin-top: -16em;
+  min-height: 17.5em;
+  position: relative;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=sign-up.css.map */
