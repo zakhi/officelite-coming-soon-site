@@ -9,10 +9,11 @@ form {
   padding: 1.5em;
   text-align: left;
 
-  input, select {
+  input, .select {
     display: block;
     width: 100%;
     font-size: inherit;
+    line-height: inherit;
     font-family: inherit;
     padding: 0 0 1em 1em;
     border: 0;
@@ -25,11 +26,54 @@ form {
     &:focus {
       outline: none;
       border-color: color.$primary-light;
-      border-bottom-width: 2px;
     }
 
     & + * {
       margin-top: 1.5em;
+    }
+  }
+
+  .select {
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .selected-value, .options li {
+    font-weight: 700;
+    color: color.$default-dark;
+
+    em {
+      margin-left: 0.5em;
+      font-style: normal;
+      opacity: 40%;
+    }
+  }
+
+  .options {
+    position: absolute;
+    width: calc(100% + 0.5em);
+    top: calc(100% + 0.5em);
+    left: -0.25em;
+    border: 1px solid color.$default-dark-15;
+    border-radius: 0.5em;
+    padding: 0.5em 2em;
+    background: white;
+    box-shadow: 0 3.125em 3.125em -1.56em rgba(75, 92, 154, 74.71%);
+    visibility: hidden;
+    pointer-events: none;
+
+    &.open {
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+
+  li {
+    padding-block: 1em;
+
+    & + * {
+      border-top: 1px solid color.$default-light-25;
     }
   }
 

@@ -215,25 +215,62 @@ form {
   padding: 1.5em;
   text-align: left;
 }
-form input, form select {
+form input, form .select {
   display: block;
   width: 100%;
   font-size: inherit;
+  line-height: inherit;
   font-family: inherit;
   padding: 0 0 1em 1em;
   border: 0;
   border-bottom: 1px solid rgba(116, 123, 149, 0.5);
 }
-form input::placeholder, form select::placeholder {
+form input::placeholder, form .select::placeholder {
   color: rgba(116, 123, 149, 0.5);
 }
-form input:focus, form select:focus {
+form input:focus, form .select:focus {
   outline: none;
   border-color: #829cff;
-  border-bottom-width: 2px;
 }
-form input + *, form select + * {
+form input + *, form .select + * {
   margin-top: 1.5em;
+}
+form .select {
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+form .selected-value, form .options li {
+  font-weight: 700;
+  color: #333950;
+}
+form .selected-value em, form .options li em {
+  margin-left: 0.5em;
+  font-style: normal;
+  opacity: 40%;
+}
+form .options {
+  position: absolute;
+  width: calc(100% + 0.5em);
+  top: calc(100% + 0.5em);
+  left: -0.25em;
+  border: 1px solid rgba(51, 57, 80, 0.15);
+  border-radius: 0.5em;
+  padding: 0.5em 2em;
+  background: white;
+  box-shadow: 0 3.125em 3.125em -1.56em rgba(75, 92, 154, 0.7471);
+  visibility: hidden;
+  pointer-events: none;
+}
+form .options.open {
+  visibility: visible;
+  pointer-events: all;
+}
+form li {
+  padding-block: 1em;
+}
+form li + * {
+  border-top: 1px solid rgba(116, 123, 149, 0.25);
 }
 form .button {
   font-size: inherit;
