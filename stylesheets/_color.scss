@@ -1,0 +1,18 @@
+@use "sass:color";
+
+$primary-dark: #5175ff;
+$primary-dark-15: color.change($primary-dark, $alpha: 0.1526);
+$primary-dark-25: color.change($primary-dark, $alpha: 0.25);
+
+$primary-light: #829cff;
+$primary-light-10: color.change($primary-light, $alpha: 0.1);
+
+$default-dark: #333950;
+$default-dark-50: color.change($default-dark, $alpha: 0.5);
+
+$default-light: #747b95;
+
+$background-dark: #25293a;
+$background-light: #fafafa;
+
+$error: #f05b5b;

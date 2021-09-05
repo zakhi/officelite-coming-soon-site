@@ -1,16 +1,4 @@
-@use "sass:color";
-
-$primary-color: #5175ff;
-
-:root {
-  --color-primary-dark: #{$primary-color};
-  --color-primary-light: #829cff;
-  --color-default-dark: #333950;
-  --color-default-light: #747b95;
-  --color-background-dark: #25293a;
-  --color-background-light: #fafafa;
-  --color-error: #f05b5b;
-}
+@use "color";
 
 *,
 *::before,
@@ -25,8 +13,8 @@ body {
   font-weight: 400;
   text-align: center;
   line-height: 1.75;
-  background: var(--color-background-light);
-  color: var(--color-default-light);
+  background: color.$background-light;
+  color: color.$default-light;
 }
 
 ul {
@@ -75,32 +63,36 @@ h3 {
   border-radius: 1.75em;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button-dark {
   color: white;
-  background: var(--color-primary-dark);
+  background: color.$primary-dark;
 }
 
 .button-dark:hover,
 .button-dark:focus {
-  background: var(--color-primary-light);
+  background: color.$primary-light;
 }
 
 .button-medium {
-  color: var(--color-primary-dark);
-  background: color.change($primary-color, $alpha: 0.1526);
+  color: color.$primary-dark;
+  background: color.$primary-dark-15;
 }
 
 .button-medium:hover,
 .button-medium:focus {
-  background: color.change($primary-color, $alpha: 0.25);
+  background: color.$primary-dark-25;
 }
 
 .button-light {
-  color: var(--color-primary-dark);
+  color: color.$primary-dark;
   background: white;
 }
 
 .button-light:hover,
 .button-light:focus {
-  color: var(--color-primary-light);
+  color: color.$primary-light;
 }

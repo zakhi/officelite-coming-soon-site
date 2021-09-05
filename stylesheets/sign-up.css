@@ -1,13 +1,3 @@
-:root {
-  --color-primary-dark: #5175ff;
-  --color-primary-light: #829cff;
-  --color-default-dark: #333950;
-  --color-default-light: #747b95;
-  --color-background-dark: #25293a;
-  --color-background-light: #fafafa;
-  --color-error: #f05b5b;
-}
-
 *,
 *::before,
 *::after {
@@ -21,8 +11,8 @@ body {
   font-weight: 400;
   text-align: center;
   line-height: 1.75;
-  background: var(--color-background-light);
-  color: var(--color-default-light);
+  background: #fafafa;
+  color: #747b95;
 }
 
 ul {
@@ -71,18 +61,22 @@ h3 {
   border-radius: 1.75em;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button-dark {
   color: white;
-  background: var(--color-primary-dark);
+  background: #5175ff;
 }
 
 .button-dark:hover,
 .button-dark:focus {
-  background: var(--color-primary-light);
+  background: #829cff;
 }
 
 .button-medium {
-  color: var(--color-primary-dark);
+  color: #5175ff;
   background: rgba(81, 117, 255, 0.1526);
 }
 
@@ -92,13 +86,118 @@ h3 {
 }
 
 .button-light {
-  color: var(--color-primary-dark);
+  color: #5175ff;
   background: white;
 }
 
 .button-light:hover,
 .button-light:focus {
-  color: var(--color-primary-light);
+  color: #829cff;
+}
+
+.countdown .coming-at {
+  font-weight: 700;
+  line-height: 3;
+  text-transform: uppercase;
+  letter-spacing: 0.3125em;
+  color: white;
+}
+.countdown .coming-at span {
+  color: #5175ff;
+}
+@media (min-width: 78em) {
+  .countdown .coming-at {
+    text-align: left;
+  }
+}
+.countdown ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8125em;
+  max-width: 20.5em;
+  margin-top: 1.125em;
+  margin-inline: auto;
+}
+@media (min-width: 48em) {
+  .countdown ul {
+    margin-top: 0.5em;
+    max-width: 28em;
+    gap: 1em;
+  }
+}
+@media (min-width: 78em) {
+  .countdown ul {
+    margin-top: 0;
+    margin-inline: unset;
+  }
+}
+.countdown li {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  background: #333950;
+  border-radius: 0.33em;
+  padding-block: 0.9em;
+}
+@media (min-width: 48em) {
+  .countdown li {
+    font-size: 1rem;
+    border-radius: 0.81em;
+    padding-block: 1em;
+  }
+}
+.countdown li strong {
+  display: block;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: white;
+  letter-spacing: 0.0625rem;
+}
+@media (min-width: 48em) {
+  .countdown li strong {
+    font-size: 3.5rem;
+    line-height: 1.15;
+  }
+}
+
+.countdown-light .coming-at {
+  color: #333950;
+}
+.countdown-light li {
+  color: rgba(51, 57, 80, 0.5);
+  background: rgba(130, 156, 255, 0.1);
+}
+.countdown-light li strong {
+  color: #5175ff;
+}
+
+main {
+  background: url("../../assets/home/bg-pattern-header.svg") no-repeat;
+  background-position-x: center;
+  background-position-y: -10.625em;
+  background-size: 28.675em;
+}
+main .container {
+  padding-top: 2.875em;
+  display: grid;
+}
+main .logo {
+  margin-inline: auto;
+}
+main .hero-text > * {
+  margin-inline: auto;
+  max-width: 21.4rem;
+}
+main .hero-text h1 {
+  color: #333950;
+  margin-top: 2em;
+}
+main .hero-text p {
+  line-height: 1.625;
+  margin-top: 1em;
+}
+main .countdown {
+  margin-top: 4em;
 }
 
 /*# sourceMappingURL=sign-up.css.map */

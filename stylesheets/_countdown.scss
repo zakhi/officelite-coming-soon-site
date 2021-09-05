@@ -1,0 +1,83 @@
+@use "color";
+@use "resolutions" as *;
+
+.countdown {
+  .coming-at {
+    font-weight: 700;
+    line-height: 3;
+    text-transform: uppercase;
+    letter-spacing: 0.3125em;
+    color: white;
+
+    span {
+      color: color.$primary-dark;
+    }
+
+    @include for-desktop {
+      text-align: left;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8125em;
+    max-width: 20.5em;
+    margin-top: 1.125em;
+    margin-inline: auto;
+
+    @include for-tablet {
+      margin-top: 0.5em;
+      max-width: 28em;
+      gap: 1em;
+    }
+
+    @include for-desktop {
+      margin-top: 0;
+      margin-inline: unset;
+    }
+  }
+
+  li {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    background: color.$default-dark;
+    border-radius: 0.33em;
+    padding-block: 0.9em;
+
+    @include for-tablet {
+      font-size: 1rem;
+      border-radius: 0.81em;
+      padding-block: 1em;
+    }
+
+    strong {
+      display: block;
+      font-size: 2rem;
+      line-height: 1.5;
+      color: white;
+      letter-spacing: 0.0625rem;
+
+      @include for-tablet {
+        font-size: 3.5rem;
+        line-height: 1.15;
+      }
+    }
+  }
+}
+
+.countdown-light {
+  .coming-at {
+    color: color.$default-dark;
+  }
+
+  li {
+    color: color.$default-dark-50;
+    background: color.$primary-light-10;
+
+    strong {
+      color: color.$primary-dark;
+    }
+  }
+}

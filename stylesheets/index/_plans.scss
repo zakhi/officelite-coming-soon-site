@@ -1,4 +1,5 @@
-@use "resolutions" as *;
+@use "../color";
+@use "../resolutions" as *;
 
 .plans {
   margin-top: 6.25em;
@@ -93,7 +94,7 @@
   }
 
   .pro-plan {
-    background: url("../assets/home/bg-pattern-pricing.svg") no-repeat, var(--color-primary-dark);
+    background: url("../../assets/home/bg-pattern-pricing.svg") no-repeat, color.$primary-dark;
     background-position-x: center;
     background-position-y: -23.6em;
     color: white;

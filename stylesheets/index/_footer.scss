@@ -1,0 +1,49 @@
+@use "../color";
+@use "../countdown";
+@use "../resolutions" as *;
+
+footer {
+  background: url("../../assets/home/bg-pattern-footer.svg") no-repeat, color.$background-dark;
+  background-position-x: center;
+  background-position-y: 9.2em;
+  background-size: 75em;
+  margin-top: -50em;
+  padding: 56em 1.5em 6em;
+
+  @include for-tablet {
+    margin-top: -31em;
+    padding-block: 37em 6.25em;
+    background-size: 89em;
+    background-position-y: 1.5em;
+  }
+
+  @include for-desktop {
+    margin-top: -15.875em;
+    padding-top: 21em;
+    background-size: 127.25em;
+    background-position-x: calc(50% - 25.2em);
+    background-position-y: -38.375em;
+  }
+
+  .container {
+    @include for-desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .button {
+    margin-top: 2.5em;
+    margin-inline: auto;
+
+    @include for-tablet {
+      margin-top: 3em;
+    }
+
+    @include for-desktop {
+      margin-top: 3.75em;
+      place-self: start right;
+      margin-inline: unset;
+    }
+  }
+}

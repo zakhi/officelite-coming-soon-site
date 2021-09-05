@@ -1,7 +1,8 @@
-@use "resolutions" as *;
+@use "../color";
+@use "../resolutions" as *;
 
 .hero {
-  background: url("../assets/home/bg-pattern-header.svg") no-repeat;
+  background: url("../../assets/home/bg-pattern-header.svg") no-repeat;
   background-position-x: center;
   background-position-y: -10.625em;
   background-size: 28.675em;
@@ -86,7 +87,7 @@
   }
 
   h1 {
-    color: var(--color-default-dark);
+    color: color.$default-dark;
 
     @include for-mobile-only {
       margin-top: 1em;
