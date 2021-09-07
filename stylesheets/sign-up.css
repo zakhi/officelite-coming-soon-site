@@ -235,6 +235,14 @@ form input:focus, form .select:focus {
 form input + *, form .select + * {
   margin-top: 1.5em;
 }
+form input.error {
+  color: #f05b5b;
+  border-color: #f05b5b;
+  background: url("../../assets/sign-up/icon-cross.svg") no-repeat;
+  background-size: 1.25em;
+  background-position-x: calc(100% - 1em);
+  background-position-y: calc(50% - 0.5em);
+}
 form .select {
   position: relative;
   user-select: none;
@@ -252,18 +260,16 @@ form .selected-value em, form .options li em {
 form .selected-value::after {
   content: "";
   position: absolute;
-  width: 0.6em;
+  width: 0.9em;
   height: 0.6em;
-  top: 0.5em;
+  top: 0.7em;
   right: 1.5em;
-  border: solid #5175ff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  background: url("../../assets/sign-up/icon-arrow-down.svg") no-repeat;
+  background-size: contain;
   transition: all 0.3s;
 }
 form .select.open .selected-value::after {
-  top: 0.85em;
-  transform: rotate(225deg);
+  transform: rotate(180deg);
 }
 form .options {
   position: absolute;
@@ -292,13 +298,12 @@ form li + * {
 form li.selected::after {
   content: "";
   position: absolute;
-  width: 0.4em;
-  height: 0.85em;
-  top: calc(50% - 0.5em);
+  width: 0.9em;
+  height: 0.8em;
+  top: calc(50% - 0.3em);
   right: 0.5em;
-  border: solid #5175ff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  background: url("../../assets/sign-up/icon-check.svg") no-repeat;
+  background-size: contain;
 }
 form .button {
   font-size: inherit;
