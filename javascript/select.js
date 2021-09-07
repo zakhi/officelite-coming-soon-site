@@ -1,6 +1,6 @@
 document.querySelectorAll(".select").forEach(select => {
     select.addEventListener("click", () => {
-        select.querySelector(".options").classList.toggle("open")
+        select.classList.toggle("open")
     })
 
     const input = select.querySelector("input")

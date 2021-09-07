@@ -50,6 +50,24 @@ form {
     }
   }
 
+  .selected-value::after {
+    content: "";
+    position: absolute;
+    width: 0.6em;
+    height: 0.6em;
+    top: 0.5em;
+    right: 1.5em;
+    border: solid color.$primary-dark;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+  }
+
+  .select.open .selected-value::after {
+    top: 0.85em;
+    transform: rotate(225deg);
+  }
+
   .options {
     position: absolute;
     width: calc(100% + 0.5em);
@@ -62,18 +80,31 @@ form {
     box-shadow: 0 3.125em 3.125em -1.56em rgba(75, 92, 154, 74.71%);
     visibility: hidden;
     pointer-events: none;
+  }
 
-    &.open {
-      visibility: visible;
-      pointer-events: all;
-    }
+  .select.open .options {
+    visibility: visible;
+    pointer-events: all;
   }
 
   li {
     padding-block: 1em;
+    position: relative;
 
     & + * {
       border-top: 1px solid color.$default-light-25;
+    }
+
+    &.selected::after {
+      content: "";
+      position: absolute;
+      width: 0.4em;
+      height: 0.85em;
+      top: calc(50% - 0.5em);
+      right: 0.5em;
+      border: solid color.$primary-dark;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
     }
   }
 
