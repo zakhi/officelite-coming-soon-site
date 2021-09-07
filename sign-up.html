@@ -12,6 +12,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
   <script type="module" src="javascript/arrival-date.js"></script>
+  <script type="module" src="javascript/select.js"></script>
 
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
@@ -38,12 +39,12 @@
         </ul>
       </div>
 
-      <form action="#">
+      <form action="" method="post">
         <input type="text" name="name" placeholder="Name" aria-label="Name">
         <input type="email" name="email" placeholder="Email Address" aria-label="Email Address">
 
-        <input type="hidden" name="plan" value="free">
         <div class="select">
+          <input type="hidden" name="plan" value="free">
           <div class="selected-value">
             Basic Pack <em>Free</em>
           </div>
