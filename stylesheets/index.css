@@ -103,7 +103,7 @@ h3 {
 }
 
 main {
-  background: url("../../assets/home/bg-pattern-header.svg") no-repeat;
+  background: url("../assets/home/bg-pattern-header.svg") no-repeat;
   background-position-x: center;
   background-position-y: -10.625em;
   background-size: 28.675em;
@@ -309,7 +309,7 @@ main .button {
   color: #747b95;
 }
 .plans .pro-plan {
-  background: url("../../assets/home/bg-pattern-pricing.svg") no-repeat, #5175ff;
+  background: url("../assets/home/bg-pattern-pricing.svg") no-repeat, #5175ff;
   background-position-x: center;
   background-position-y: -23.6em;
   color: white;
@@ -402,7 +402,7 @@ main .button {
 }
 
 footer {
-  background: url("../../assets/home/bg-pattern-footer.svg") no-repeat, #25293a;
+  background: url("../assets/home/bg-pattern-footer.svg") no-repeat, #25293a;
   background-position-x: center;
   background-position-y: 9.2em;
   background-size: 75em;

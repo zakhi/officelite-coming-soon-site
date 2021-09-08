@@ -1,8 +1,9 @@
 @use "../color";
+@use "../image";
 @use "../resolutions" as *;
 
 footer {
-  background: url("../../assets/home/bg-pattern-footer.svg") no-repeat, color.$background-dark;
+  background: image.$background-footer no-repeat, color.$background-dark;
   background-position-x: center;
   background-position-y: -32em;
   background-size: 75em;

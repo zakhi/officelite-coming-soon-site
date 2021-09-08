@@ -181,7 +181,7 @@ h3 {
 
 @media (max-width: calc(48em - 1px)) {
   main {
-    background: url("../../assets/home/bg-pattern-header.svg") no-repeat;
+    background: url("../assets/home/bg-pattern-header.svg") no-repeat;
     background-position-x: center;
     background-position-y: -10.625em;
     background-size: 28.675em;
@@ -324,7 +324,7 @@ form input + *, form .select + * {
 form input.error {
   color: #f05b5b;
   border-color: #f05b5b;
-  background: url("../../assets/sign-up/icon-cross.svg") no-repeat;
+  background: url("../assets/sign-up/icon-cross.svg") no-repeat;
   background-size: 1.25em;
   background-position-x: calc(100% - 1em);
   background-position-y: calc(50% - 0.5em);
@@ -350,7 +350,7 @@ form .selected-value::after {
   height: 0.6em;
   top: 0.7em;
   right: 1.5em;
-  background: url("../../assets/sign-up/icon-arrow-down.svg") no-repeat;
+  background: url("../assets/sign-up/icon-arrow-down.svg") no-repeat;
   background-size: contain;
   transition: all 0.3s;
 }
@@ -382,7 +382,7 @@ form li + * {
   border-top: 1px solid rgba(116, 123, 149, 0.25);
 }
 form li.selected {
-  background: url("../../assets/sign-up/icon-check.svg") no-repeat;
+  background: url("../assets/sign-up/icon-check.svg") no-repeat;
   background-size: 0.9em 0.8em;
   background-position-x: calc(100% - 0.5em);
   background-position-y: center;
@@ -400,7 +400,7 @@ form .button {
 }
 
 footer {
-  background: url("../../assets/home/bg-pattern-footer.svg") no-repeat, #25293a;
+  background: url("../assets/home/bg-pattern-footer.svg") no-repeat, #25293a;
   background-position-x: center;
   background-position-y: -32em;
   background-size: 75em;
