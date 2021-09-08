@@ -17,4 +17,15 @@ footer {
     background-size: 90.875em;
     background-position-y: -33.6em;
   }
+
+  @include for-desktop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: calc(50% + 18.75em);
+    background-size: 127.25em;
+    background-position-y: -15em;
+    background-position-x: calc(50% - 2em);
+  }
 }

@@ -2,3 +2,12 @@
 @use "sign-up/main";
 @use "sign-up/form";
 @use "sign-up/footer";
+@use "resolutions" as *;
+
+html, body {
+  @include for-desktop {
+    position: relative;
+    min-height: 64em;
+    height: 100vh;
+  }
+}

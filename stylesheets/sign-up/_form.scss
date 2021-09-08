@@ -14,6 +14,13 @@ form {
     padding: 2.5em 2.625em 3.125em;
   }
 
+  @include for-desktop {
+    grid-area: form;
+    align-self: center;
+    width: 100%;
+    margin: 0;
+  }
+
   input, .select {
     display: block;
     width: 100%;

@@ -17,6 +17,18 @@ main {
     @include for-tablet {
       padding-top: 4.5em;
     }
+
+    @include for-desktop {
+      padding-top: 5.0625em;
+      text-align: left;
+      display: grid;
+      grid-template:
+          "logo ." auto
+          "hero form" auto
+          "countdown form" auto
+          / 33.75em auto;
+      column-gap: 7.8125em;
+    }
   }
 
   .logo {
@@ -24,6 +36,12 @@ main {
 
     @include for-tablet {
       margin-left: 2.5em;
+    }
+
+    @include for-desktop {
+      margin-inline: 0;
+      grid-area: logo;
+      margin-bottom: 7.875em;
     }
   }
 
@@ -35,11 +53,21 @@ main {
       max-width: 35em;
     }
 
+    @include for-desktop {
+      grid-area: hero;
+    }
+
     h1 {
       margin-top: 2.875em;
 
       @include for-tablet {
         margin-top: 2.6em;
+      }
+
+      @include for-desktop {
+        font-size: 3.5rem;
+        line-height: 1.42;
+        margin: 0;
       }
     }
 
@@ -50,6 +78,12 @@ main {
       @include for-tablet {
         margin-top: 1.5em;
       }
+
+      @include for-desktop {
+        font-size: 1.125rem;
+        line-height: 1.56;
+        margin-top: 1.33em;
+      }
     }
   }
 
@@ -58,6 +92,10 @@ main {
 
     @include for-tablet {
       margin-top: 2.5em;
+    }
+
+    @include for-desktop {
+      grid-area: countdown;
     }
   }
 }
