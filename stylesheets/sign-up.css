@@ -178,32 +178,64 @@ h3 {
   color: #5175ff;
 }
 
-main {
-  background: url("../../assets/home/bg-pattern-header.svg") no-repeat;
-  background-position-x: center;
-  background-position-y: -10.625em;
-  background-size: 28.675em;
+@media (max-width: calc(48em - 1px)) {
+  main {
+    background: url("../../assets/home/bg-pattern-header.svg") no-repeat;
+    background-position-x: center;
+    background-position-y: -10.625em;
+    background-size: 28.675em;
+  }
 }
 main .container {
   padding-top: 2.875em;
   display: grid;
 }
+@media (min-width: 48em) {
+  main .container {
+    padding-top: 4.5em;
+  }
+}
 main .logo {
   margin-inline: auto;
 }
-main .hero > * {
+@media (min-width: 48em) {
+  main .logo {
+    margin-left: 2.5em;
+  }
+}
+main .hero {
   margin-inline: auto;
   max-width: 21.4rem;
 }
+@media (min-width: 48em) {
+  main .hero {
+    max-width: 35em;
+  }
+}
 main .hero h1 {
-  margin-top: 2em;
+  margin-top: 2.875em;
+}
+@media (min-width: 48em) {
+  main .hero h1 {
+    margin-top: 2.6em;
+  }
 }
 main .hero p {
   line-height: 1.625;
   margin-top: 1em;
 }
+@media (min-width: 48em) {
+  main .hero p {
+    margin-top: 1.5em;
+  }
+}
 main .countdown {
   margin-top: 4em;
+}
+@media (min-width: 48em) {
+  main .countdown {
+    margin-top: 2.5em;
+  }
 }
 
 form {
@@ -214,6 +246,11 @@ form {
   border-radius: 0.8125em;
   padding: 1.5em;
   text-align: left;
+}
+@media (min-width: 48em) {
+  form {
+    padding: 2.5em 2.625em 3.125em;
+  }
 }
 form input, form .select {
   display: block;
@@ -295,15 +332,11 @@ form li {
 form li + * {
   border-top: 1px solid rgba(116, 123, 149, 0.25);
 }
-form li.selected::after {
-  content: "";
-  position: absolute;
-  width: 0.9em;
-  height: 0.8em;
-  top: calc(50% - 0.3em);
-  right: 0.5em;
+form li.selected {
   background: url("../../assets/sign-up/icon-check.svg") no-repeat;
-  background-size: contain;
+  background-size: 0.9em 0.8em;
+  background-position-x: calc(100% - 0.5em);
+  background-position-y: center;
 }
 form .button {
   font-size: inherit;
@@ -327,6 +360,13 @@ footer {
   min-height: 17.5em;
   position: relative;
   z-index: -1;
+}
+@media (min-width: 48em) {
+  footer {
+    min-height: 23.75em;
+    background-size: 90.875em;
+    background-position-y: -33.6em;
+  }
 }
 
 /*# sourceMappingURL=sign-up.css.map */

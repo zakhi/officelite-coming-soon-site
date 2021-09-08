@@ -1,4 +1,5 @@
 @use "../color";
+@use "../resolutions" as *;
 
 form {
   background: white;
@@ -8,6 +9,10 @@ form {
   border-radius: 0.8125em;
   padding: 1.5em;
   text-align: left;
+
+  @include for-tablet {
+    padding: 2.5em 2.625em 3.125em;
+  }
 
   input, .select {
     display: block;
@@ -102,15 +107,11 @@ form {
       border-top: 1px solid color.$default-light-25;
     }
 
-    &.selected::after {
-      content: "";
-      position: absolute;
-      width: 0.9em;
-      height: 0.8em;
-      top: calc(50% - 0.3em);
-      right: 0.5em;
+    &.selected {
       background: url("../../assets/sign-up/icon-check.svg") no-repeat;
-      background-size: contain;
+      background-size: 0.9em 0.8em;
+      background-position-x: calc(100% - 0.5em);
+      background-position-y: center;
     }
   }
 

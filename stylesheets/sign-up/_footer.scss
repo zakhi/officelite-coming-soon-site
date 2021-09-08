@@ -1,4 +1,5 @@
 @use "../color";
+@use "../resolutions" as *;
 
 footer {
   background: url("../../assets/home/bg-pattern-footer.svg") no-repeat, color.$background-dark;
@@ -10,4 +11,10 @@ footer {
   min-height: 17.5em;
   position: relative;
   z-index: -1;
+
+  @include for-tablet {
+    min-height: 23.75em;
+    background-size: 90.875em;
+    background-position-y: -33.6em;
+  }
 }
